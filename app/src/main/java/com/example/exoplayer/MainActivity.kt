@@ -32,20 +32,19 @@ class MainActivity : AppCompatActivity(), Player.Listener {
         //title=findViewById(R.id.title)
 
         setUpPlayer()
-       // addMP3Files()
+     //   addMP3Files()
         addMp4Files()
 
-       if (savedInstanceState !=null){
-           savedInstanceState.getInt("MediaItem").let { restreMedia->
+        savedInstanceState?.getInt("MediaItem")?.let { restreMedia->
 
-               val seekTime=savedInstanceState.getLong("SeekTime")
-               player.seekTo(restreMedia,seekTime)
-               player.play()
+            val seekTime=savedInstanceState.getLong("SeekTime")
+            player.seekTo(restreMedia,seekTime)
+            player.play()
 
-           }
-       }
+        }
 
     }
+
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
@@ -55,6 +54,11 @@ class MainActivity : AppCompatActivity(), Player.Listener {
 
     }
 
+    override fun onResume() {
+        super.onResume()
+
+        supportActionBar?.hide()
+    }
     override fun onStop() {
         super.onStop()
         player.release()

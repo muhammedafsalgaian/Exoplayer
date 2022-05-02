@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#80000000">
+
+    <LinearLayout
+
+        android:id="@+id/sec_controlvid1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exo_rew"
+            android:src="@drawable/ic_baseline_replay_5"
+            android:theme="@style/ClickableView"
+            android:layout_marginEnd="50dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exo_play"
+            android:src="@drawable/ic_play"
+            android:theme="@style/ClickableView"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exo_pause"
+            android:src="@drawable/ic_pause"
+            android:theme="@style/ClickableView"/>
+        <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/exo_ffwd"
+        android:src="@drawable/ic_baseline_forward_5"
+        android:theme="@style/ClickableView"
+            android:layout_marginStart="50dp"/>
+
+
+
+
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/exo_lock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:padding="10dp"
+        android:src="@drawable/ic_baseline_lock_open_24"
+        android:theme="@style/ClickableView" />
+
+    <LinearLayout
+        android:id="@+id/sec_controlvid2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:padding="8dp"
+        android:gravity="center"
+        android:layout_marginTop="4dp">
+
+        <TextView
+            android:id="@+id/exo_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"/>
+
+        <com.google.android.exoplayer2.ui.DefaultTimeBar
+            android:id="@+id/exo_progress"
+            android:layout_width="0dp"
+            android:layout_height="26dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:unplayed_color="@color/white"
+            app:played_color="#9F9B9B"
+            app:buffered_color="#494747"
+           />
+
+        <TextView
+            android:id="@+id/exo_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_marginEnd="10dp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/bt_fullscreen"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+             android:src="@drawable/ic_fullscreen_icon"
+            android:theme="@style/ClickableView"
+
+
+            />
+
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

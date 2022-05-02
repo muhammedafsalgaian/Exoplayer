@@ -43,9 +43,11 @@ dependencies {
 
     implementation 'com.google.android.exoplayer:exoplayer:2.17.1'
     implementation'com.google.android.exoplayer:exoplayer-ui:2.17.1'
-   // implementation'com.google.android.exoplayer:exoplayer-ima:2.17.1'
 
+  //  implementation 'com.google.android.exoplayer:extension-ima:2.17.1'
     implementation 'com.github.HaarigerHarald:android-youtubeExtractor:master-SNAPSHOT'
+
+    implementation 'com.google.android.gms:play-services-ads:20.6.0'
 
     //multi Dex
     implementation"androidx.multidex:multidex:2.0.1"
